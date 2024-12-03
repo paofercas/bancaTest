@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: banca-cliente
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/banca_cliente?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: true
+  messages:
+    basename: messages
+    encoding: UTF-8
+  kafka: 
+    bootstrap-servers: localhost:9092
+    producer:
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+        max-poll-interval-ms: 300000
+        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        properties: 
+            spring.json.trusted.packages: comm.sofka.dto
+
+server:
+  port: 8080  # Configura el puerto en el que se ejecuta la aplicación
+  servlet:
+    context-path: /api
+
+logging:
+  level:
+    org:
+      springframework:
+        web: ERROR
+
+

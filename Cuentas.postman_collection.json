@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "588016ac-7da5-4316-a4fa-54f5b3d74e15",
+		"name": "Cuentas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26425021"
+	},
+	"item": [
+		{
+			"name": "ListarCuentas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/cuentas",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearCuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroCuenta\":\"58554789\",\r\n    \"tipo\": \"Ahorros\",\r\n    \"saldoInicial\": 1000,\r\n    \"estado\": \"TRUE\",\r\n    \"cliente\":\"José Lema\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/cuentas",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarCuenta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clienteId\": 8,\r\n    \"numeroCuenta\":\"58554789\",\r\n    \"tipo\": \"Ahorros\",\r\n    \"saldoInicial\": 1500,\r\n    \"estado\": \"TRUE\",\r\n    \"cliente\":\"José Lema\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/cuentas",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarCuenta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clienteId\": 8,\r\n    \"numeroCuenta\":\"58554789\",\r\n    \"tipo\": \"Ahorros\",\r\n    \"saldoInicial\": 1500,\r\n    \"estado\": \"TRUE\",\r\n    \"cliente\":\"José Lema\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/cuentas",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "fa8d8731-0254-47a2-822c-83f94ef2c9f4",
+		"name": "Clientes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26425021"
+	},
+	"item": [
+		{
+			"name": "CreateCliente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": " es_419",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"José Diaz\",\r\n    \"identificacion\": \"1725034569\",\r\n    \"genero\": \"M\",\r\n    \"edad\": 31,\r\n    \"direccion\": \"Otavalo 23 y principal\",\r\n    \"telefono\": \"098254785\",\r\n    \"contraseña\": \"1234\",\r\n    \"estado\": \"TRUE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarCliente",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": " es_419",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 8,\r\n        \"identificacion\": \"1725034567\",\r\n        \"nombre\": \"José Lema\",\r\n        \"genero\": \"M\",\r\n        \"edad\": 35,\r\n        \"direccion\": \"Otavalo sn y principal\",\r\n        \"telefono\": \"098254785\",\r\n        \"contraseña\": \"1234\",\r\n        \"estado\": \"TRUE\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarCliente",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": " es_419",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":8,\r\n    \"nombre\": \"José Lema\",\r\n    \"identificacion\": \"1725034567\",\r\n    \"genero\": \"M\",\r\n    \"edad\": 29,\r\n    \"direccion\": \"Otavalo sn y principal\",\r\n    \"telefono\": \"098254785\",\r\n    \"contraseña\": \"1234\",\r\n    \"estado\": \"TRUE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarClientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

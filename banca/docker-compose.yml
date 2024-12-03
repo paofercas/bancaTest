@@ -1,0 +1,9 @@
+services:
+  banca-cliente:
+    build: .
+    ports:
+      - "8082:8080"
+  banca:
+    build: .
+    ports:
+      - "8083:8080"

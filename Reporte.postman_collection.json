@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "ddd63b6a-f101-4341-b5b9-aab8d2ce2c9e",
+		"name": "Reporte",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26425021"
+	},
+	"item": [
+		{
+			"name": "GenerarReporte",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
